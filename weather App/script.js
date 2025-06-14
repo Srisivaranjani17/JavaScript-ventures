@@ -7,10 +7,9 @@ const description=document.getElementById('description');
 
 btn.addEventListener("click",()=>{
     const city=cityInput.value;
-    const apiKey="c76efbb811a4cfeb4fff420c6f51ca56";
 
     if(city){
-        const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=metric`;
 
         fetch(url)
         .then(response=>response.json())
