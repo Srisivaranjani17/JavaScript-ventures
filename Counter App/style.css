@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+    background-color: floralwhite;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.container{
+    text-align: center;
+    background-color: rgb(6, 220, 142);
+    margin-top: 50px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 70px;
+    width: 50%;
+}
+
+#value {
+    display: block;
+    font-size: 5rem;
+    margin: 20px 0;
+    color: #333;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn{
+    padding: 10px 10px;
+    background-color: deeppink;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .btn:hover{
+    background-color: rgb(177, 18, 102);
+  }
