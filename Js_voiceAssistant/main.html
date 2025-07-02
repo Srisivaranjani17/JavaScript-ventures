@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_VoiceAssistant</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            /* background: #11e9ed; */
+            /* background: #11e9ed; */
+            background: radial-gradient(circle, rgba(17, 233, 237, 1) 0%, rgba(45, 132, 253, 1) 100%);        
+        }
+        .container{
+            width:400px;
+            margin: 50px auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        h2{
+            align-items: center;
+
+        }
+        #input{
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+            
+         .btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 20px;
+            text-align: center;
+            transition: 0.5s;
+            /* background-size: 200% auto; */
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+          }
+         
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>&#129302;Text to Voice Assistant</h2>
+        <input id="input" type="text" placeholder="Enter the text">
+        <br/>
+        <button onclick="Speak()" class="btn-grad">🎙️Speak</button>
+    </div>
+    <script>
+         let Speak=()=>{
+            let input=document.getElementById("input").value;
+            let utterance=new SpeechSynthesisUtterance(input);
+            // let voice=new SpeechSynthesisUtterance(input);
+            speechSynthesis.speak(utterance);
+            let voices=speechSynthesis.getVoices();
+            utterance.onstart=()=>console.log("Started to speak");
+            // utterance.voice=voices.find(v=>v.name==="Google UK English Female")
+            // utterance.onerror=()=>console.log("Voice is not match");
+            
+         }
+    </script>
+</body>
+</html>
